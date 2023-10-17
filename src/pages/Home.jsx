@@ -1,10 +1,19 @@
+
+import { NavLink } from "react-router-dom";
+import songsData from "../data/songs.json";
+//lagt til
+
 // TODO: Import necessary modules and data
 function Home() {
   // TODO: Implement logic to display the list of songs
   return (
     <>
-      <div>
-        <h1>Rolling Stones 500 Greatest Songs of all Time</h1>
+      <div className="songWrapper">
+        {songsData.songs.map(song => (
+          <NavLink key={song.title} to={`/song/${song.title.toLowerCase().replace(/ /g, "-")}`} className="songLink">
+            {song.title}
+          </NavLink>
+        ))}
         {/* TODO: Display the list of songs with links */}
       </div>
     </>

@@ -1,4 +1,5 @@
-import { BrowserRouter, Link, Routes } from "react-router-dom";
+import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
+//allerede improtert { BrowserRouter, Link, Routes }
 import routes from "./routes/routes";
 import "./App.css";
 
